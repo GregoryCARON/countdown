@@ -1,0 +1,27 @@
+body {
+    background-color: lightblue;
+}
+.contenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timeBlock {
+    display: flex;
+    flex-direction: column;
+}
+#userHeures {
+    text-align: center;
+    font-family: 'Wallpoet', cursive;
+    font-size: 25px;
+}
+#userMinutes {
+    text-align: center;
+    font-family: 'Wallpoet', cursive;
+    font-size: 25px;
+}
+#userSecondes {
+    text-align: center;
+    font-family: 'Wallpoet', cursive;
+    font-size: 25px;
+}
