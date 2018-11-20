@@ -58,13 +58,12 @@ var countdown = function () {
         secondes = 0;
     }
 
-
     document.getElementById('userHeures').innerHTML = heures;
     document.getElementById('userMinutes').innerHTML = minutes;
     document.getElementById('userSecondes').innerHTML = secondes;
 
     if (heures === 0 && minutes === 0 && secondes === 0) {
-        document.getElementById('Start').innerHTML = 'Start';
+        document.getElementById('btnStart').innerHTML = 'Start';
         clearTimeout(timer);
         timerBoot = 0;
         lecture(MP3, 1, 0);
@@ -75,18 +74,18 @@ var countdown = function () {
     }
 };
 
-document.getElementById('Start').addEventListener('click', function () {
-    if (timerBoot === 1) {
-        document.getElementById('Start').innerHTML = 'Start';
-        clearTimeout(timer);
-        timerBoot = 0;
-    } else {
-        document.getElementById('Start').innerHTML = 'Stop';
-        //tempsFinal = (h * 3600) + (m * 60) + s;
-        console.log(document.getElementById('userSecondes').value);
-        countdown();
+document.getElementById('btnStart').addEventListener('click', function () {
+    if (h !== 0 || m !== 0 || s !== 0) {
+        if (timerBoot === 1) {
+            document.getElementById('btnStart').innerHTML = 'Start';
+            clearTimeout(timer);
+            timerBoot = 0;
+        } else {
+            document.getElementById('btnStart').innerHTML = 'Stop';
+            countdown();
+        }
     }
-    console.log(timer);
+    //console.log(timer);
 });
 
 document.getElementById('btnAddHeure').addEventListener('click', function () {
@@ -156,3 +155,18 @@ document.getElementById('btnRemSeconde').addEventListener('click', function () {
     tempsFinal = (h * 3600) + (m * 60) + s;
     document.getElementById('userSecondes').innerHTML = s;
 });
+
+function mHover(id) {
+    document.getElementById(id).style.cursor = 'pointer';
+}
+
+function mOut(id) {
+    document.getElementById(id).style.cursor = 'default';
+}
+
+document.getElementById('btnAddHeure').addEventListener('mouseover', mHover('btnAddHeure'));
+document.getElementById('btnRemHeure').addEventListener('mouseover', mHover('btnRemHeure'));
+document.getElementById('btnAddMinute').addEventListener('mouseover', mHover('btnAddMinute'));
+document.getElementById('btnRemMinute').addEventListener('mouseover', mHover('btnRemMinute'));
+document.getElementById('btnAddSeconde').addEventListener('mouseover', mHover('btnAddSeconde'));
+document.getElementById('btnRemSeconde').addEventListener('mouseover', mHover('btnRemSeconde'));

@@ -1,27 +1,44 @@
 body {
-    background-color: lightblue;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+h1 {
+    font-family: 'Wallpoet', cursive;
+    font-size: 150px;
+}
+
 .contenu {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .timeBlock {
     display: flex;
     flex-direction: column;
 }
-#userHeures {
+
+#userHeures, #userMinutes, #userSecondes, #btnAddHeure, #btnRemHeure, #btnAddMinute, #btnRemMinute, #btnAddSeconde, #btnRemSeconde {
     text-align: center;
     font-family: 'Wallpoet', cursive;
-    font-size: 25px;
+    font-size: 100px;
+    width: 200px;
 }
-#userMinutes {
-    text-align: center;
-    font-family: 'Wallpoet', cursive;
-    font-size: 25px;
+
+#btnAddHeure:hover, #btnRemHeure:hover, #btnAddMinute:hover, #btnRemMinute:hover, #btnAddSeconde:hover, #btnRemSeconde:hover, #btnStart:hover {
+    filter: blur(2px);
+    opacity: .5;
+    color: yellow;
 }
-#userSecondes {
+
+.hover {
+    cursor: pointer;
+}
+
+#btnStart {
     text-align: center;
     font-family: 'Wallpoet', cursive;
-    font-size: 25px;
+    font-size: 200px;
 }
