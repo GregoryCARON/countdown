@@ -46,9 +46,4 @@ var countdown = function() {
 
 document.getElementById('Start').addEventListener('click', countdown);
 
-
-
-
-
-
 //convertTime(5000);
