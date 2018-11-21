@@ -1,12 +1,12 @@
 body {
-    background-image: url('bg.jpg');
+    /*background-image: url('bg.jpg');*/
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 h1 {
     font-family: 'Wallpoet', cursive;
-    font-size: 150px;
+    font-size: 120px;
 }
 
 .contenu {

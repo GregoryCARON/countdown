@@ -5,9 +5,9 @@ var timerBoot = 0;
 var h = 0, m = 0, s = 0;
 var MP3 = 'GVFouet.mp3';
 
-document.getElementById('userHeures').innerHTML = '0';
+/*document.getElementById('userHeures').innerHTML = '0';
 document.getElementById('userMinutes').innerHTML = '0';
-document.getElementById('userSecondes').innerHTML = '0';
+document.getElementById('userSecondes').innerHTML = '0';*/
 
 let timer;
 
@@ -170,3 +170,51 @@ document.getElementById('btnAddMinute').addEventListener('mouseover', mHover('bt
 document.getElementById('btnRemMinute').addEventListener('mouseover', mHover('btnRemMinute'));
 document.getElementById('btnAddSeconde').addEventListener('mouseover', mHover('btnAddSeconde'));
 document.getElementById('btnRemSeconde').addEventListener('mouseover', mHover('btnRemSeconde'));
+
+
+function afficher(all) {
+    while(all < 13) {
+        switch(all) {
+            case 1:
+                document.body.style.backgroundImage = 'url("bg.jpg")';
+                break;
+            case 2:
+                document.getElementById('titre').innerHTML = 'The Final Countdown';
+                break;
+            case 3:
+                document.getElementById('btnAddHeure').innerHTML = '+';
+                break;
+            case 4:
+                document.getElementById('btnAddMinute').innerHTML = '+';
+                break;
+            case 5:
+                document.getElementById('btnAddSeconde').innerHTML = '+';
+                break;
+            case 6:
+                document.getElementById('btnRemHeure').innerHTML = '-';
+                break;
+            case 7:
+                document.getElementById('btnRemMinute').innerHTML = '-';
+                break;
+            case 8:
+                document.getElementById('btnRemSeconde').innerHTML = '-';
+                break;
+            case 9:
+                document.getElementById('userHeures').innerHTML = '0';
+                break;
+            case 10:
+                document.getElementById('userMinutes').innerHTML = '0';
+                break;
+            case 11:
+                document.getElementById('userSecondes').innerHTML = '0';
+                break;
+            case 12:
+                document.getElementById('btnStart').innerHTML = 'Start';
+                break;
+        }
+        all++;
+        setTimeout(afficher(all), 10000);
+    }
+}
+
+afficher(0);
